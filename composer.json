@@ -1,0 +1,25 @@
+{
+    "name": "bcscoder/jcheckout",
+    "description": "Jarvis checkout.",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "yusidabcs",
+            "email": "agusyusida@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/controllers",
+            "src/models"
+        ],
+        "psr-0": {
+            "Bcscoder\\Jcheckout\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
