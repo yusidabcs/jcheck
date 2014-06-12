@@ -61,7 +61,7 @@ function hash256($input){
 }
 
 function writeLog($text,$prefix='195log'){
-	$fileurl = public_path().$prefix.'_'.date('Ymd').'.txt';
+	$fileurl = public_path().'/'.$prefix.'_'.date('Ymd').'.txt';
 	if(file_exists($fileurl)){
 		if (!$handle = fopen($fileurl, 'a+')) {
 			echo 'Cannot open file ('.$fileurl.')';

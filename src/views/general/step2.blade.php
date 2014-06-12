@@ -126,8 +126,11 @@
                     </div>
 
                     <div style="clear:both;"></div>
-                    <button class="next-button btn btn-info" type="submit">Lanjut <i class="icon-arrow-right"></i></button>
-                    <a href="{{URL::to('mycheckout')}}" class="back-button btn btn-warning"><i class="icon-arrow-left"></i> Kembali</a
+                    <hr>
+                    <center>
+                        <a href="{{URL::to('mycheckout')}}" class="btn btn-large btn-warning"><i class="icon-arrow-left icon-white"></i> Kembali</a>
+                        <button class="btn btn-large btn-info" type="submit">Lanjut <i class="icon-arrow-right icon-white"></i></button>
+                    </center>
                     </form>
                 </div>
             </div>

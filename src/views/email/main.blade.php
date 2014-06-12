@@ -8,25 +8,27 @@
         .content {width: 100%; max-width: 600px;}  
         </style>
     </head>
-    <body yahoo bgcolor="#f6f8f1">
-        <table width="100%" bgcolor="#f6f8f1" border="0" cellpadding="0" cellspacing="0">
+    <body yahoo bgcolor="#fff">
+        <table width="100%" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
                     <table class="content" align="center" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                             <td>
-                                <p>Halo {{{pelanggan}}},</p>
+                                <p>Hallo @{{pelanggan}},</p>
 
-                                <p>Terimakasih telah berbelanja di {{{toko}}}. Detail order anda KodeOrder: {{{kodeorder}}} , Tanggal Order: {{{tanggal}}}</p>
+                                <p>Terimakasih telah berbelanja di @{{toko}}. <br>Detail order anda <hr>KodeOrder: @{{kodeorder}} <br> Tanggal Order: @{{tanggal}}</p>
                                 <p>Detail Belanja :</p>
-                                {{{cart}}}
+                                @{{cart}}
+                                <hr>
+                                Pengiriman : @{{ekspedisi}}
                                 <hr>
                                 <p>Segera lakukan pembayaran agar order anda dapat diproses secepatnya.</p>
-                                {{{pembayaran}}}
+                                @{{pembayaran}}
                                 <hr>
                                 <p>Setelah melakukan pembayaran mohon segera Konfirmasi Pembayaran anda agar kami bisa segera mengirimkan pesanan anda. Jika ada pertanyaan, saran dan keluhan mengenai toko online kami, anda bisa menghubingi kami melalui web kami.<p>
 
-                                <br></p> Salam Hangat, {{{toko}}}</p>
+                                <br></p> Salam Hangat, @{{toko}}</p>
                             </td>
                         </tr>
                     </table>

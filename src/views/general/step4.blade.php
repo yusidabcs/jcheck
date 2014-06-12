@@ -1,4 +1,9 @@
 @section('content')
+@if(Session::has('error'))
+<div id="message" class="error" style="display:none">
+	{{Session::get('error')}}
+</div>
+@endif
 <div id="demos">
 	<h1 class="text-center">Checkout - Ringkasan Order</h1>
 	<hr>
@@ -190,10 +195,11 @@
 					</div>
 					<hr>
 					<div style="clear:both;"></div>
-					{{Form::open(array('url'=>'mycheckout/finish','method'=>'post','name'=>'finish'))}}
-					
-					<button style="margin-top: 8%;" type="submit" class="next-button btn btn-info"> Selesaikan Pemesanan</button>
-					<a style="margin-top: 8%;" href="{{URL::to('mycheckout/pembayaran')}}" class="back-button btn btn-warning"><i class="icon-arrow-left"></i> Kembali</a>
+					{{Form::open(array('url'=>'mycheckout/finish','method'=>'post','name'=>'finish','onSubmit'=>'submit()'))}}
+					<center>
+					<a style="margin-top: 3%;" href="{{URL::to('mycheckout/pembayaran')}}" class="btn btn-large btn-warning"><i class="icon-arrow-left icon-white"></i> Kembali</a>
+					<button style="margin-top: 3%;" type="submit" class="btn btn-large btn-info"> Selesaikan Pemesanan</button>
+					</center>
 					{{Form::close()}}
 				</div>
 			</div>

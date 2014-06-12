@@ -149,7 +149,7 @@ Selamat, anda berhasil login.
                                                 </div>
                                                 <br>
                                                 <div id='ekspedisiplace'>
-                                                    {{$ekspedisi!=null? "- ".$ekspedisi['ekspedisi']."<br><br>":''}}
+                                                    {{$ekspedisi!=null? "- ".$ekspedisi['ekspedisi']." (".price_format($ekspedisi['tarif']).")<br><br>":''}} 
                                                 </div>
                                                 <small style="font-style: italic;">(*) Bila kota anda tidak ditemukan atau tidak ada dalam daftar, pilihlah kota yang terdekat atau hubungi penjual</small>
                                         @elseif($pengaturan->statusEkspedisi==2)
@@ -216,7 +216,7 @@ Selamat, anda berhasil login.
                         @else
                         <div class="row-fluid">
                             <div class="span12">
-                                <input type="button" class="btn btn-info pull-right" value="Lanjutkan" id="form1">
+                                <button type="button" class="btn btn-large btn-info pull-right" id="form1"> Lanjutkan <i class="icon-arrow-right icon-white"></i></button>
                             </div>
                         </div>
                         @endif

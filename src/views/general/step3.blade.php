@@ -16,6 +16,7 @@
 			<div class="span12 box-content">
 				<form class="form-horizontal" action="{{URL::to('mycheckout/konfirmasi')}}" name='pembayaran' method='post' data-pjax>
 				<div class="step-content">
+					<br>
 					<div class="row-fluid">
                        <div class="span4">
                        	Pilih Salah Satu Jenis Pembayaran: <br><br>
@@ -41,11 +42,12 @@
 						  iPaymu
 						</label>
 						@endif
-
+						@if($kontak->checkoutType==1)
 						<label class="radio">
 							<input type="radio" name="tipepembayaran" id="optionsRadios1" value="jarvis_payment" {{$pembayaran!=null? ($pembayaran['tipepembayaran']=='jarvis_payment'?'checked':''):'' }}>
 							  Jarvis Payment [beta]<br>
 						</label><br><br>
+						@endif
                        </div>
                        <div class="span8">
                        		<div class="well" style="display:none" id="bank">
@@ -87,14 +89,14 @@
 							<div class="well" style="display:none" id="ipaymu">
                        		</div>
 							@endif
-
+							@if($kontak->checkoutType==1)
 							<div class="well" style="display:none" id="jarvis_payment">
                        			<h4 class="text-success">Silakan pilih salah satu tipe pembayaran</h4>
                        			<hr>
                        			<div class="row-fluid">
                        				<div class="span6">
                        					<label class="radio">
-											<input type="radio" name="jarvis_payment_type" id="optionsRadios1" value="credit_card" {{$pembayaran!=null? ($pembayaran['jarvis_payment_type']=='credit_card'?'checked':''):'' }}>
+											<input type="radio" name="jarvis_payment_type" id="optionsRadios1" value="credit_card" {{$pembayaran!=null? (isset($pembayaran['jarvis_payment_type'])?($pembayaran['jarvis_payment_type']=='credit_card'?'checked':''):''):'' }} disabled="">
 											  Credit Card
 										</label>
                        				</div>
@@ -106,7 +108,7 @@
                        			<div class="row-fluid">
                        				<div class="span6">
                        					<label class="radio">
-											<input type="radio" name="jarvis_payment_type" id="optionsRadios1" value="bank_channel" {{$pembayaran!=null? ($pembayaran['jarvis_payment_type']=='bank_channel'?'checked':''):'' }}>
+											<input type="radio" name="jarvis_payment_type" id="optionsRadios1" value="bank_channel" {{$pembayaran!=null? ( isset($pembayaran['jarvis_payment_type'])?($pembayaran['jarvis_payment_type']=='bank_channel'?'checked':''):''):'' }}>
 											  Bank Channel <i class="icon-question-sign" ></i>
 										</label>
                        				</div>
@@ -124,13 +126,17 @@
                        				</div>
                        			</div>
                        		</div>
+                       		@endif
                        </div>
                     </div>					
 				</div>
 
 				<div style="clear:both;"></div>
-				<button class="next-button btn btn-info" type="submit">Lanjut <i class="icon-arrow-right"></i></button>
-				<a href="{{URL::to('mycheckout/pengiriman')}}" data-pjax class="back-button btn btn-warning"><i class="icon-arrow-left"></i> Kembali</a
+				<hr>
+				<center>
+				<a href="{{URL::to('mycheckout/pengiriman')}}" data-pjax class="btn btn-large btn-warning"><i class="icon-arrow-left icon-white"></i> Kembali</a>
+				<button class="btn btn-large btn-info" type="submit">Lanjut <i class="icon-arrow-right icon-white"></i></button>
+				</center>
 				</form>
 			</div>
 		</div>
