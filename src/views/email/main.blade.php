@@ -17,17 +17,17 @@
                             <td>
                                 <p>Hallo @{{pelanggan}},</p>
 
-                                <p>Terimakasih telah berbelanja di @{{toko}}. <br>Detail order anda <hr>KodeOrder: @{{kodeorder}} <br> Tanggal Order: @{{tanggal}}</p>
+                                <p>Terimakasih telah berbelanja di @{{toko}}. <br>
+                                Detail order anda <hr>
+                                KodeOrder: <strong>#@{{kodeorder}}</strong> <br>
+                                Tanggal Order: @{{tanggal}}</p>
                                 <p>Detail Belanja :</p>
                                 @{{cart}}
                                 <hr>
                                 Pengiriman : @{{ekspedisi}}
                                 <hr>
-                                <p>Segera lakukan pembayaran agar order anda dapat diproses secepatnya.</p>
                                 @{{pembayaran}}
                                 <hr>
-                                <p>Setelah melakukan pembayaran mohon segera Konfirmasi Pembayaran anda agar kami bisa segera mengirimkan pesanan anda. Jika ada pertanyaan, saran dan keluhan mengenai toko online kami, anda bisa menghubingi kami melalui web kami.<p>
-
                                 <br></p> Salam Hangat, @{{toko}}</p>
                             </td>
                         </tr>
